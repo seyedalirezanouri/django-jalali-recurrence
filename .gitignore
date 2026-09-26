@@ -1,0 +1,16 @@
+*.pyc
+*.egg-info/
+tests/test_db.sqlite
+.coverage
+htmlcov/
+.cache/
+.tox/
+docs/_build
+build/
+dist/
+.pytest_cache/
+/.idea
+/.vscode
+/venv
+coverage.xml
+.eggs/

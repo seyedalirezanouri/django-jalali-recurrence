@@ -7,7 +7,7 @@ def reject_legacy_rows(apps, schema_editor):
         model = apps.get_model("recurrence", name)
         if model.objects.exists():
             raise RuntimeError(
-                "django-recurrence 2.0 is Jalali-only; existing recurrence "
+                "django-jalali-recurrence 2.0 is Jalali-only; existing recurrence "
                 f"rows were found in {name}. Start with an empty database."
             )
 

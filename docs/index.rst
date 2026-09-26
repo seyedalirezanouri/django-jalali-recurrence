@@ -1,7 +1,7 @@
-django-recurrence
-*****************
+django-jalali-recurrence
+*************************
 
-django-recurrence is a utility for working with recurring Jalali dates in
+django-jalali-recurrence is a utility for working with recurring Jalali dates in
 Django.
 
 It provides:

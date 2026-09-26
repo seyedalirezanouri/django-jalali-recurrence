@@ -1,48 +1,43 @@
+django-jalali-recurrence
+========================
 
-django-recurrence
-=================
-
-.. image:: https://jazzband.co/static/img/badge.svg
-   :target: https://jazzband.co/
-   :alt: Jazzband
-
-.. image:: https://img.shields.io/github/stars/jazzband/django-recurrence.svg?label=Stars&style=socialcA
-   :target: https://github.com/jazzband/django-recurrence
+.. image:: https://img.shields.io/github/stars/seyedalirezanouri/django-jalali-recurrence.svg?label=Stars&style=social
+   :target: https://github.com/seyedalirezanouri/django-jalali-recurrence
    :alt: GitHub
 
-.. image:: https://img.shields.io/pypi/v/django-recurrence.svg
-   :target: https://pypi.org/project/django-recurrence/
+.. image:: https://img.shields.io/pypi/v/django-jalali-recurrence.svg
+   :target: https://pypi.org/project/django-jalali-recurrence/
    :alt: PyPI release
 
-.. image:: https://img.shields.io/pypi/pyversions/django-recurrence.svg
-   :target: https://pypi.org/project/django-recurrence/
+.. image:: https://img.shields.io/pypi/pyversions/django-jalali-recurrence.svg
+   :target: https://pypi.org/project/django-jalali-recurrence/
    :alt: Supported Python versions
 
-.. image:: https://img.shields.io/pypi/djversions/django-recurrence.svg
-   :target: https://pypi.org/project/django-recurrence/
+.. image:: https://img.shields.io/pypi/djversions/django-jalali-recurrence.svg
+   :target: https://pypi.org/project/django-jalali-recurrence/
    :alt: Supported Django versions
 
-.. image:: https://img.shields.io/readthedocs/django-recurrence.svg
-   :target: https://django-recurrence.readthedocs.io/
-   :alt: Documentation
-
-.. image:: https://github.com/jazzband/django-recurrence/workflows/Test/badge.svg
-   :target: https://github.com/jazzband/django-recurrence/actions
+.. image:: https://github.com/seyedalirezanouri/django-jalali-recurrence/workflows/Test/badge.svg
+   :target: https://github.com/seyedalirezanouri/django-jalali-recurrence/actions
    :alt: GitHub actions
 
-.. image:: https://codecov.io/gh/jazzband/django-recurrence/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/jazzband/django-recurrence
-   :alt: Coverage
 
-
-django-recurrence is a Jalali (Persian calendar) utility for working with
-recurring dates in Django. Version 2 uses Jalali dates throughout its public
-API and stores versioned Jalali recurrence text. Gregorian recurrence strings
-from older releases are intentionally rejected.
+django-jalali-recurrence is a Jalali (Persian calendar) utility for working
+with recurring dates in Django. Version 2 uses Jalali dates throughout its
+public API and stores versioned Jalali recurrence text. Gregorian recurrence
+strings from older releases are intentionally rejected.
 
 Date values are provided by the ``jdatetime`` package (for example,
 ``jdatetime.datetime(1403, 1, 1)``); import that package directly when
 constructing dates.
+
+
+Installation
+------------
+
+::
+
+    pip install django-jalali-recurrence
 
 
 Functionality
@@ -80,7 +75,7 @@ Documentation
 
 For more information on installation and configuration see the documentation at:
 
-https://django-recurrence.readthedocs.io/
+https://github.com/seyedalirezanouri/django-jalali-recurrence/tree/master/docs
 
 
 Issues
@@ -88,7 +83,20 @@ Issues
 
 If you have questions or have trouble using the app please file a bug report at:
 
-https://github.com/jazzband/django-recurrence/issues
+https://github.com/seyedalirezanouri/django-jalali-recurrence/issues
+
+
+Credits
+-------
+
+django-jalali-recurrence is a fork of django-recurrence_ created to add
+Jalali (Persian calendar) support. django-recurrence_ was originally
+created by Tamas Kemenczy, Lino Helms and individual contributors.
+The upstream project remains available at
+https://github.com/jazzband/django-recurrence and keeps its own
+copyright (see the LICENSE file).
+
+.. _django-recurrence: https://github.com/jazzband/django-recurrence
 
 
 Contributions
@@ -97,7 +105,7 @@ Contributions
 All contributions are welcome!
 
 It is best to separate proposed changes and PRs into small, distinct patches
-by type so that they can be merged faster into upstream and released quicker.
+by type so that they can be merged faster and released quicker.
 
 One way to organize contributions would be to separate PRs for e.g.
 
@@ -113,5 +121,3 @@ on the currently officially supported Python and Django versions.
 
 The test automation is run automatically with GitHub Actions, but you can
 run it locally with the ``tox`` command before pushing commits.
-
-This is a `Jazzband <https://jazzband.co>`_ project. By contributing you agree to abide by the `Contributor Code of Conduct <https://jazzband.co/about/conduct>`_ and follow the `guidelines <https://jazzband.co/about/guidelines>`_.

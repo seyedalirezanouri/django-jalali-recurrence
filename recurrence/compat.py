@@ -2,7 +2,7 @@ try:
     from django.db.models.fields.subclassing import Creator
 except ImportError:
     # This class was removed in Django 1.10, so I've pulled it into
-    # django-recurrence.
+    # django-jalali-recurrence.
 
     class Creator:
         """

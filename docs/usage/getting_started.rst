@@ -1,7 +1,7 @@
 Getting started
 ---------------
 
-Once you've :ref:`installed django-recurrence <install>`, you'll
+Once you've :ref:`installed django-jalali-recurrence <install>`, you'll
 generally want to start by using it in one of your models, which can
 be done like this:
 

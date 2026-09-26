@@ -1,10 +1,9 @@
 [project]
-name = "django-recurrence"
+name = "django-jalali-recurrence"
 version = "2.0.0"
 description = "Django utility for Jalali (Persian calendar) recurrence rules"
 authors = [
-    {name = "Tamas Kemenczy", email = "tamas.kemenczy@gmail.com"},
-    {name = "Lino Helms", email = "lino@lino.io"}
+    {name = "sanouri", email = "s.a.nouri2004@gmail.com"}
 ]
 dependencies = [
     "django>=4.0",
@@ -17,7 +16,6 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Plugins",
     "Environment :: Web Environment",
-    "Framework :: Django",
     "Framework :: Django",
     "Framework :: Django :: 4.2",
     "Framework :: Django :: 5.2",
@@ -39,7 +37,11 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jazzband/django-recurrence"
+Homepage = "https://github.com/seyedalirezanouri/django-jalali-recurrence"
+Repository = "https://github.com/seyedalirezanouri/django-jalali-recurrence"
+Issues = "https://github.com/seyedalirezanouri/django-jalali-recurrence/issues"
+Documentation = "https://github.com/seyedalirezanouri/django-jalali-recurrence/tree/master/docs"
+"Original project" = "https://github.com/jazzband/django-recurrence"
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"

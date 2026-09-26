@@ -10,10 +10,10 @@ Installation
 Download the library
 --------------------
 
-Firstly, you'll need to install ``django-recurrence`` from PyPI. The
+Firstly, you'll need to install ``django-jalali-recurrence`` from PyPI. The
 easiest way to do this is with pip::
 
-    pip install django-recurrence
+    pip install django-jalali-recurrence
 
 Then, make sure ``recurrence`` is in your ``INSTALLED_APPS`` setting:
 
@@ -27,9 +27,9 @@ Then, make sure ``recurrence`` is in your ``INSTALLED_APPS`` setting:
 Supported Django and Python versions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently, django-recurrence supports Python 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, and 3.12.
+Currently, django-jalali-recurrence supports Python 3.9, 3.10, 3.11, 3.12 and 3.13.
 
-django-recurrence is currently tested with django 2.2, 3.2, 4.0, 4.1, 4.2, and 5.0
+django-jalali-recurrence is currently tested with Django 4.2, 5.2 and 6.0
 
 Set up internationalization
 ---------------------------
@@ -39,8 +39,8 @@ Set up internationalization
     This step is currently mandatory, but may be bypassed with an
     extra bit of javascript. See :issue:`47` for details.
 
-Using a translation of django-recurrence other than
-``en`` requires that django-recurrence's JavaScript can
+Using a translation of django-jalali-recurrence other than
+``en`` requires that django-jalali-recurrence's JavaScript can
 access the translation strings. This is handled with Django's built
 in ``javascript_catalog`` view, which you must install by adding the
 following to your project ``urls.py`` file:
@@ -68,7 +68,7 @@ following to your project ``urls.py`` file:
 Configure static files
 ----------------------
 
-django-recurrence includes some static files (all to do with
+django-jalali-recurrence includes some static files (all to do with
 rendering the JavaScript widget that makes handling recurring dates
 easier). To ensure these are served correctly, you'll probably want
 to ensure you also have ``django.contrib.staticfiles`` in your

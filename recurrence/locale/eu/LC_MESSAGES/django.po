@@ -1,6 +1,6 @@
-# Basque translations for django-recurrence
+# Basque translations for django-jalali-recurrence
 # Copyright (C) Tamas Kemenczy and individual contributors
-# This file is distributed under the same license as the django-recurrence package.
+# This file is distributed under the same license as the django-jalali-recurrence package.
 # Unai Zalakain <unai@gisa-elkartea.org>, 2016.
 #
 msgid ""

@@ -1,5 +1,10 @@
-.. image:: https://jazzband.co/static/img/jazzband.svg
-   :target: https://jazzband.co/
-   :alt: Jazzband
+Contributing to django-jalali-recurrence
+=========================================
 
-This is a `Jazzband <https://jazzband.co>`_ project. By contributing you agree to abide by the `Contributor Code of Conduct <https://jazzband.co/about/conduct>`_ and follow the `guidelines <https://jazzband.co/about/guidelines>`_.
+Contributions are welcome! Please open issues and pull requests at
+https://github.com/seyedalirezanouri/django-jalali-recurrence.
+
+This package is a fork of the `Jazzband <https://jazzband.co>`_ project
+`django-recurrence <https://github.com/jazzband/django-recurrence>`_;
+contributions to the original project should go upstream to
+https://github.com/jazzband/django-recurrence instead.

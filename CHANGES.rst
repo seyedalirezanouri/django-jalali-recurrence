@@ -5,6 +5,10 @@ Changes
 2.0.0
 -----
 
+- Rename the distribution to ``django-jalali-recurrence`` (the import
+  package remains ``recurrence``).  The project is now maintained at
+  https://github.com/seyedalirezanouri/django-jalali-recurrence and is a
+  fork of https://github.com/jazzband/django-recurrence.
 - Replace the calendar primitives with ``jdatetime.date`` and
   ``jdatetime.datetime``.  The old ``recurrence.JalaliDate`` and
   ``recurrence.JalaliDateTime`` APIs are removed.

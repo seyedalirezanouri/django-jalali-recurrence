@@ -1,15 +1,15 @@
 Contributing
 ============
 
-Contributions to django-recurrence are very welcome - whether in the
+Contributions to django-jalali-recurrence are very welcome - whether in the
 form of bug reports, feature requests, or patches. Bug reports and
 feature requests are tracked on our `GitHub issues page
-<https://github.com/jazzband/django-recurrence/issues>`_.
+<https://github.com/seyedalirezanouri/django-jalali-recurrence/issues>`_.
 
-If you want to make changes to django-recurrence, you'll need to fork
+If you want to make changes to django-jalali-recurrence, you'll need to fork
 our GitHub repository, make any changes you want, and send us a pull
 request. Feel free to `file an issue
-<https://github.com/jazzband/django-recurrence/issues>`_ if
+<https://github.com/seyedalirezanouri/django-jalali-recurrence/issues>`_ if
 you want help getting set up.
 
 Running the tests
@@ -19,7 +19,7 @@ The easiest way to run the tests is to run::
 
     make testall
 
-from the root of your local copy of the django-recurrence
+from the root of your local copy of the django-jalali-recurrence
 repository. This will require that you have tox installed. If you
 don't have tox installed, you can install it with ``pip install
 tox``. Running all the tests also requires that you have Python 2.6,

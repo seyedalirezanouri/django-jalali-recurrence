@@ -8,7 +8,7 @@ testall:
 	tox
 
 build: clean
-	python setup.py sdist bdist_wheel
+	python -m build
 
 clean:
 	rm -rf dist/*
@@ -18,6 +18,7 @@ push: build
 	git push
 
 release: push
-	twine upload -r pypi dist/*
+	twine check dist/*
+	twine upload dist/*
 
 .PHONY: coverage test testall build clean push

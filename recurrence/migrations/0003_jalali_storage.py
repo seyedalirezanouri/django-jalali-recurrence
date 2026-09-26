@@ -1,3 +1,4 @@
+import recurrence.fields
 from django.db import migrations, models
 
 
@@ -19,15 +20,15 @@ class Migration(migrations.Migration):
         migrations.RunPython(reject_legacy_rows, migrations.RunPython.noop),
         migrations.AlterField(
             model_name="recurrence", name="dtstart",
-            field=models.TextField(blank=True, null=True),
+            field=recurrence.fields.JalaliDateTimeField(blank=True, null=True),
         ),
         migrations.AlterField(
             model_name="recurrence", name="dtend",
-            field=models.TextField(blank=True, null=True),
+            field=recurrence.fields.JalaliDateTimeField(blank=True, null=True),
         ),
         migrations.AlterField(
             model_name="rule", name="until",
-            field=models.TextField(blank=True, null=True),
+            field=recurrence.fields.JalaliDateTimeField(blank=True, null=True),
         ),
         migrations.AddField(
             model_name="rule", name="skip",
@@ -35,6 +36,6 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name="date", name="dt",
-            field=models.TextField(),
+            field=recurrence.fields.JalaliDateTimeField(),
         ),
     ]

@@ -18,17 +18,19 @@ class RuleManager(manager.Manager):
         for param in recurrence.Rule.byparams:
             if param == 'byday':
                 # see recurrence.base docstrings about byday handling
-                rule_kwargs[param] = (map(
-                    lambda v: recurrence.Weekday(*v),
-                    rule_model.params.filter(param=param).values_list(
-                        'value', 'index')) or None)
+                rule_kwargs[param] = tuple(
+                    recurrence.Weekday(value, index or None)
+                    for value, index in rule_model.params.filter(
+                        param=param
+                    ).values_list('value', 'index')
+                )
             else:
-                rule_kwargs[param] = (map(
-                    lambda v: v[0],
-                    rule_model.params.filter(param=param).values_list(
-                        'value'
-                    )
-                ) or None)
+                rule_kwargs[param] = tuple(
+                    value
+                    for value, in rule_model.params.filter(
+                        param=param
+                    ).values_list('value')
+                )
 
         return recurrence.Rule(*rule_args, **rule_kwargs)
 
@@ -51,7 +53,8 @@ class RuleManager(manager.Manager):
                     # see recurrence.base docstrings about byday handling
                     weekday = recurrence.to_weekday(value)
                     rule_model.params.create(
-                        param=param, value=weekday.number, index=weekday.index)
+                        param=param, value=weekday.number,
+                        index=weekday.index or 0)
                 else:
                     rule_model.params.create(param=param, value=value)
 

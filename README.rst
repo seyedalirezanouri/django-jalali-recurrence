@@ -122,4 +122,6 @@ on the currently officially supported Python and Django versions.
 The test automation is run automatically with GitHub Actions, but you can
 run it locally with the ``tox`` command before pushing commits.
 
+Consideration
+-------------
 --I used AI as well :)

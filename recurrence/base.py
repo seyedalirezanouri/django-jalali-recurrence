@@ -484,6 +484,44 @@ class Recurrence:
                 and (value < upper or inc and value == upper)]
 
 
+class InvalidRecurrence:
+    """Placeholder for stored recurrence text this library cannot parse.
+
+    Model fields return this instead of raising when a database row
+    contains unreadable text (legacy formats, corrupted data, ...), so
+    the row stays accessible, editable and deletable.
+
+    Attributes:
+        `raw`: the original stored text. Saving the instance writes it
+            back to the database unchanged, so no data is lost.
+        `error`: the exception raised while parsing `raw`, or `None`.
+
+    Evaluates as false, so ``if value:`` guards skip it instead of
+    attempting to use it as a `Recurrence`.
+    """
+
+    def __init__(self, raw, error=None):
+        self.raw = raw
+        self.error = error
+
+    def __str__(self):
+        return str(self.raw)
+
+    def __repr__(self):
+        return f"InvalidRecurrence({self.raw!r}, error={self.error!r})"
+
+    def __bool__(self):
+        return False
+
+    def __eq__(self, other):
+        if not isinstance(other, InvalidRecurrence):
+            return NotImplemented
+        return (self.raw, self.error) == (other.raw, other.error)
+
+    def __hash__(self):
+        return hash((self.raw, self.error))
+
+
 def validate(obj):
     if not isinstance(obj, (Rule, Recurrence)):
         raise exceptions.ValidationError("incompatible object")

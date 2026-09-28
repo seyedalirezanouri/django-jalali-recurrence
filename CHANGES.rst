@@ -2,6 +2,18 @@
 Changes
 =======
 
+2.0.2
+----------
+
+- Never raise while reading stored text that cannot be deserialized:
+  ``RecurrenceField`` and ``JalaliDateTimeField`` now return a
+  ``recurrence.InvalidRecurrence`` placeholder exposing the original
+  ``raw`` text and the parsing ``error``, so rows containing invalid
+  or legacy data stay accessible, editable and deletable instead of
+  making the whole table unreadable. Saving a placeholder writes the
+  original text back unchanged; assigning invalid text in code and
+  form validation still raise as before.
+
 2.0.0
 -----
 

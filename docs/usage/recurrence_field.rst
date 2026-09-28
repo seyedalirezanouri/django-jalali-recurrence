@@ -253,3 +253,37 @@ can get textual descriptions, like this:
        text_rules_inclusion.append(rule.to_text())
 
 Similar code would work equally well for ``exrules``.
+
+.. _invalid-values:
+
+Handling unreadable stored values
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Rows written by an older version of this library, or otherwise
+corrupted, may contain text that cannot be deserialized. Reading
+such a row never raises: the field returns a
+``recurrence.InvalidRecurrence`` placeholder instead, so the row
+stays accessible, editable and deletable - you will never need to
+drop the table to get at your data.
+
+.. code-block:: python
+
+   import recurrence
+
+   course = Course.objects.get(pk=1)
+
+   if isinstance(course.recurrences, recurrence.InvalidRecurrence):
+       print(course.recurrences.raw)     # the original stored text
+       print(course.recurrences.error)   # why it failed to parse
+       course.recurrences = ...          # assign a valid pattern to repair it
+
+The placeholder evaluates as false, so ``if course.recurrences:``
+guards simply skip it. Saving an untouched instance writes the
+original text back to the database unchanged, so no data is lost
+while you decide how to repair the row. ``JalaliDateTimeField``
+behaves the same way.
+
+Invalid text is still rejected where it should be: assigning it in
+code (``course.recurrences = "..."``) and form validation both raise
+as before, so bad values cannot enter the database through the
+normal API.

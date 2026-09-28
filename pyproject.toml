@@ -1,6 +1,6 @@
 [project]
 name = "django-jalali-recurrence"
-version = "2.0.1"
+version = "2.0.2"
 description = "Django utility for Jalali (Persian calendar) recurrence rules"
 authors = [
     {name = "sanouri", email = "s.a.nouri2004@gmail.com"}
